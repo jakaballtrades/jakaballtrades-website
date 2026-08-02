@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Add this line after the final domain is connected and sitemap-template.xml
+# is renamed to sitemap.xml:
+# Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
