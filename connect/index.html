@@ -5,19 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- =====================================================
-       PRIMARY PAGE INFORMATION
-       ===================================================== -->
-
   <title>Connect with Lucy Jakab | Jakab All Trades</title>
 
   <meta
     name="description"
     content="Connect with Lucy Jakab of Jakab All Trades in Pendleton, South Carolina. Find Luxe Lens Photography, stays near Clemson, social links, beauty favorites, FaithForge Gaming, and more.">
 
+  <!-- This is primarily a QR / NFC conversion page. -->
   <meta
     name="robots"
-    content="index,follow,max-image-preview:large">
+    content="noindex,follow,max-image-preview:large">
 
   <meta
     name="theme-color"
@@ -27,39 +24,19 @@
     rel="canonical"
     href="https://jakaballtrades.com/connect/">
 
-
-  <!-- =====================================================
-       BROWSER FAVICON
-       ===================================================== -->
-
   <link
     rel="icon"
     type="image/webp"
     href="/assets/images/flaticon.webp">
 
-
   <!-- =====================================================
-       SOCIAL SHARING / OPEN GRAPH
-
-       Used when the Connect page is shared through
-       Facebook, Messenger, Discord, texts, etc.
+       SOCIAL SHARING
        ===================================================== -->
 
-  <meta
-    property="og:type"
-    content="website">
-
-  <meta
-    property="og:site_name"
-    content="Jakab All Trades">
-
-  <meta
-    property="og:locale"
-    content="en_US">
-
-  <meta
-    property="og:url"
-    content="https://jakaballtrades.com/connect/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jakab All Trades">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://jakaballtrades.com/connect/">
 
   <meta
     property="og:title"
@@ -81,11 +58,6 @@
     property="og:image:alt"
     content="Jakab All Trades logo">
 
-
-  <!-- =====================================================
-       X / TWITTER CARD
-       ===================================================== -->
-
   <meta
     name="twitter:card"
     content="summary_large_image">
@@ -106,24 +78,9 @@
     name="twitter:image:alt"
     content="Jakab All Trades logo">
 
-
-  <!-- =====================================================
-       MAIN SITE STYLESHEET
-
-       Because this page lives at:
-       /connect/index.html
-
-       ../ moves back to the website root.
-       ===================================================== -->
-
   <link
     rel="stylesheet"
     href="../assets/css/styles.css">
-
-
-  <!-- =====================================================
-       STRUCTURED DATA
-       ===================================================== -->
 
   <script type="application/ld+json">
   {
@@ -148,17 +105,15 @@
 
 </head>
 
-
 <body class="connect-page">
 
 <a class="skip-link" href="#main-content">
   Skip to content
 </a>
 
-
-<!-- =========================================
-     SMALL TOP BAR
-     ========================================= -->
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
 
 <header class="connect-header">
 
@@ -189,17 +144,15 @@
 
 <main id="main-content">
 
-
-  <!-- =========================================
-       DIGITAL PROFILE CARD
-       ========================================= -->
+  <!-- =====================================================
+       DIGITAL PROFILE
+       ===================================================== -->
 
   <section class="digital-profile">
 
     <div class="digital-card">
 
-
-      <!-- COVER IMAGE -->
+      <!-- COVER -->
 
       <div class="digital-cover">
 
@@ -211,8 +164,7 @@
 
       </div>
 
-
-      <!-- PROFILE PHOTO -->
+      <!-- PROFILE IMAGE -->
 
       <div class="digital-avatar-holder">
 
@@ -225,8 +177,7 @@
 
       </div>
 
-
-      <!-- PROFILE INFORMATION -->
+      <!-- INTRO -->
 
       <div class="digital-intro">
 
@@ -249,26 +200,39 @@
           right here.
         </p>
 
-
         <div class="digital-actions">
 
           <!--
-            We'll create lucy-jakab.vcf separately.
+            MOBILE:
+            Opens / downloads Lucy's VCF.
+
+            DESKTOP:
+            JavaScript intercepts this button and opens
+            the "Send contact to yourself" popup.
           -->
 
-          <a
+          <button
             class="digital-button digital-button-primary"
-            href="../assets/contact/lucy-jakab.vcf"
-            download>
-            Save My Contact
-          </a>
+            id="save-contact-button"
+            type="button">
 
+            <span class="button-icon" aria-hidden="true">
+              +
+            </span>
+
+            <span>
+              Save My Contact
+            </span>
+
+          </button>
 
           <button
             class="digital-button digital-button-secondary"
             type="button"
             data-open-lead>
+
             Send Me Your Info
+
           </button>
 
         </div>
@@ -276,13 +240,11 @@
       </div>
 
 
-
-      <!-- =========================================
-           POPL-STYLE IMAGE LINK GRID
-           ========================================= -->
+      <!-- =================================================
+           IMAGE LINK GRID
+           ================================================= -->
 
       <div class="digital-links">
-
 
         <!-- BOOK A SHOOT -->
 
@@ -619,13 +581,12 @@
 
         </a>
 
-
       </div>
 
 
-      <!-- =========================================
-           BOTTOM CONNECT CTA
-           ========================================= -->
+      <!-- =================================================
+           BOTTOM CTA
+           ================================================= -->
 
       <div class="digital-bottom-cta">
 
@@ -636,11 +597,12 @@
         <button
           type="button"
           data-open-lead>
+
           Share your contact info
+
         </button>
 
       </div>
-
 
     </div>
 
@@ -649,10 +611,9 @@
 </main>
 
 
-
 <!-- =====================================================
      LEAD CAPTURE MODAL
-     Opens on EVERY PAGE LOAD
+     Opens every time the page loads.
      ===================================================== -->
 
 <div
@@ -661,18 +622,15 @@
   role="dialog"
   aria-modal="true"
   aria-labelledby="lead-title"
-  aria-describedby="lead-description">
+  aria-describedby="lead-description"
+  aria-hidden="true">
 
   <div
     class="lead-backdrop"
     data-close-lead>
   </div>
 
-
   <div class="lead-card">
-
-
-    <!-- CLOSE -->
 
     <button
       class="lead-close"
@@ -682,18 +640,12 @@
       &times;
     </button>
 
-
-    <!-- PROFILE PHOTO -->
-
     <img
       class="lead-avatar"
       src="../assets/images/profile-lucy.webp"
       alt="Lucy Jakab"
       width="100"
       height="100">
-
-
-    <!-- FORM STATE -->
 
     <div id="lead-form-state">
 
@@ -715,19 +667,11 @@
 
       </div>
 
-
-      <!-- =====================================
-           FORMSPREE FORM
-           ===================================== -->
-
       <form
         id="lead-form"
         class="lead-form"
         action="https://formspree.io/f/maennzyr"
         method="POST">
-
-
-        <!-- FULL NAME -->
 
         <div class="lead-field">
 
@@ -746,9 +690,6 @@
 
         </div>
 
-
-        <!-- EMAIL -->
-
         <div class="lead-field">
 
           <label for="lead-email">
@@ -763,9 +704,6 @@
             placeholder="Email address">
 
         </div>
-
-
-        <!-- PHONE -->
 
         <div class="lead-field">
 
@@ -785,9 +723,6 @@
 
         </div>
 
-
-        <!-- NOTE -->
-
         <div class="lead-field">
 
           <label for="lead-note">
@@ -802,33 +737,21 @@
 
         </div>
 
-
-        <!-- LEAD SOURCE -->
-
         <input
           id="lead-source"
           type="hidden"
           name="lead_source"
           value="Direct">
 
-
-        <!-- PAGE -->
-
         <input
           type="hidden"
           name="page"
           value="Jakab All Trades Connect Page">
 
-
-        <!-- SUBJECT -->
-
         <input
           type="hidden"
           name="_subject"
           value="New Jakab All Trades Lead">
-
-
-        <!-- SUBMIT -->
 
         <button
           id="lead-submit"
@@ -847,23 +770,17 @@
 
         </button>
 
-
         <p class="lead-privacy">
           Your information is securely submitted through Formspree
           and sent to Jakab All Trades.
         </p>
-
-
-        <!-- ERROR MESSAGE -->
 
         <p
           id="lead-error"
           class="lead-error"
           role="alert"
           hidden>
-
           Something went wrong. Please try again.
-
         </p>
 
       </form>
@@ -871,10 +788,7 @@
     </div>
 
 
-
-    <!-- =====================================
-         SUCCESS STATE
-         ===================================== -->
+    <!-- SUCCESS -->
 
     <div
       id="lead-success-state"
@@ -909,16 +823,211 @@
 
     </div>
 
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     DESKTOP SAVE CONTACT MODAL
+
+     Mobile does NOT normally see this.
+     ===================================================== -->
+
+<div
+  class="save-contact-modal"
+  id="save-contact-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="save-contact-title"
+  aria-describedby="save-contact-description"
+  aria-hidden="true">
+
+  <div
+    class="save-contact-backdrop"
+    data-close-save-contact>
+  </div>
+
+  <div class="save-contact-card">
+
+    <button
+      class="save-contact-close"
+      type="button"
+      aria-label="Close save contact window"
+      data-close-save-contact>
+      &times;
+    </button>
+
+    <img
+      class="save-contact-avatar"
+      src="../assets/images/profile-lucy.webp"
+      alt="Lucy Jakab"
+      width="100"
+      height="100">
+
+    <div id="save-contact-form-state">
+
+      <div class="save-contact-heading">
+
+        <p class="save-contact-kicker">
+          Save contact
+        </p>
+
+        <h2 id="save-contact-title">
+          Get Lucy's contact
+        </h2>
+
+        <p id="save-contact-description">
+          Enter your email address to request Lucy's contact information,
+          or download her contact card directly.
+        </p>
+
+      </div>
+
+      <!--
+        IMPORTANT:
+        Formspree will send this request to YOU.
+
+        It does NOT automatically email the VCF attachment
+        back to the visitor.
+
+        We can connect automatic outbound delivery separately.
+      -->
+
+      <form
+        id="save-contact-form"
+        class="save-contact-form"
+        action="https://formspree.io/f/maennzyr"
+        method="POST">
+
+        <div class="save-contact-field">
+
+          <label for="save-contact-email">
+            Email Address
+          </label>
+
+          <input
+            id="save-contact-email"
+            type="email"
+            name="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            required>
+
+        </div>
+
+        <input
+          type="hidden"
+          name="request_type"
+          value="Send Lucy Jakab Contact Card">
+
+        <input
+          id="save-contact-source"
+          type="hidden"
+          name="lead_source"
+          value="Direct">
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Lucy Jakab Contact Card Request">
+
+        <button
+          id="save-contact-submit"
+          class="save-contact-submit"
+          type="submit">
+
+          <span class="save-contact-submit-text">
+            Email Me the Contact
+          </span>
+
+          <span
+            class="save-contact-submit-loading"
+            hidden>
+            Sending...
+          </span>
+
+        </button>
+
+        <p
+          id="save-contact-error"
+          class="save-contact-error"
+          role="alert"
+          hidden>
+          Something went wrong. Please try again.
+        </p>
+
+      </form>
+
+
+      <div class="save-contact-divider">
+        <span>or</span>
+      </div>
+
+
+      <a
+        class="save-contact-download"
+        href="../assets/contact/lucy-jakab.vcf"
+        download="Lucy-Jakab.vcf">
+
+        Download Contact File
+
+      </a>
+
+    </div>
+
+
+    <!-- CONTACT REQUEST SUCCESS -->
+
+    <div
+      id="save-contact-success"
+      class="save-contact-success"
+      hidden>
+
+      <div class="save-contact-success-icon">
+        ✓
+      </div>
+
+      <p class="save-contact-kicker">
+        Request received
+      </p>
+
+      <h2>
+        You're all set!
+      </h2>
+
+      <p>
+        Your email address has been received.
+      </p>
+
+      <a
+        class="save-contact-download"
+        href="../assets/contact/lucy-jakab.vcf"
+        download="Lucy-Jakab.vcf">
+
+        Download Lucy's Contact
+
+      </a>
+
+      <button
+        class="save-contact-finish"
+        type="button"
+        data-close-save-contact>
+
+        Continue Exploring
+
+      </button>
+
+    </div>
 
   </div>
 
 </div>
 
 
-
-<!-- =========================================
-     SMALL FOOTER
-     ========================================= -->
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
 
 <footer class="connect-footer">
 
@@ -926,9 +1035,7 @@
     Jakab All Trades
   </a>
 
-  <span>
-    •
-  </span>
+  <span>•</span>
 
   <a href="../links/">
     Explore Everything
@@ -941,103 +1048,90 @@
 </footer>
 
 
-
-<!-- YOUR NORMAL SITE JS -->
-
 <script src="../assets/js/site.js" defer></script>
 
 
-<!-- =========================================
-     CONNECT PAGE JS
-     ========================================= -->
+<!-- =====================================================
+     CONNECT PAGE JAVASCRIPT
+     ===================================================== -->
 
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const modal =
-    document.getElementById("lead-modal");
-
-  const form =
-    document.getElementById("lead-form");
-
-  const formState =
-    document.getElementById("lead-form-state");
-
-  const successState =
-    document.getElementById("lead-success-state");
-
-  const errorMessage =
-    document.getElementById("lead-error");
-
-  const submitButton =
-    document.getElementById("lead-submit");
-
-  const submitText =
-    submitButton.querySelector(".lead-submit-text");
-
-  const submitLoading =
-    submitButton.querySelector(".lead-submit-loading");
-
-  const firstInput =
-    document.getElementById("lead-name");
-
-  const sourceInput =
-    document.getElementById("lead-source");
-
-  const openButtons =
-    document.querySelectorAll("[data-open-lead]");
-
-  const closeButtons =
-    document.querySelectorAll("[data-close-lead]");
-
-
-  /* =========================================
-     READ LEAD SOURCE FROM URL
-
-     Examples:
-
-     /connect/?src=qr
-     /connect/?src=nfc
-     /connect/?src=business-card
-     /connect/?src=photography
-
-     ========================================= */
+  /* =====================================================
+     SHARED SOURCE TRACKING
+     ===================================================== */
 
   const urlParams =
     new URLSearchParams(window.location.search);
 
   const leadSource =
-    urlParams.get("src");
-
-  if (leadSource) {
-
-    sourceInput.value = leadSource;
-
-  }
+    urlParams.get("src") || "Direct";
 
 
+  /* =====================================================
+     LEAD CAPTURE MODAL
+     ===================================================== */
 
-  /* =========================================
-     OPEN MODAL
-     ========================================= */
+  const leadModal =
+    document.getElementById("lead-modal");
+
+  const leadForm =
+    document.getElementById("lead-form");
+
+  const leadFormState =
+    document.getElementById("lead-form-state");
+
+  const leadSuccessState =
+    document.getElementById("lead-success-state");
+
+  const leadError =
+    document.getElementById("lead-error");
+
+  const leadSubmit =
+    document.getElementById("lead-submit");
+
+  const leadSubmitText =
+    leadSubmit.querySelector(".lead-submit-text");
+
+  const leadSubmitLoading =
+    leadSubmit.querySelector(".lead-submit-loading");
+
+  const leadFirstInput =
+    document.getElementById("lead-name");
+
+  const leadSourceInput =
+    document.getElementById("lead-source");
+
+  const leadOpenButtons =
+    document.querySelectorAll("[data-open-lead]");
+
+  const leadCloseButtons =
+    document.querySelectorAll("[data-close-lead]");
+
+
+  leadSourceInput.value = leadSource;
+
 
   function openLeadModal() {
 
-    modal.classList.add("is-open");
+    leadModal.classList.add("is-open");
 
-    document.body.classList.add("lead-modal-open");
+    leadModal.setAttribute(
+      "aria-hidden",
+      "false"
+    );
 
-    /*
-      Don't immediately open the mobile keyboard.
-      Only autofocus on larger screens.
-    */
+    document.body.classList.add(
+      "lead-modal-open"
+    );
 
     if (window.innerWidth > 680) {
 
       setTimeout(function () {
 
-        firstInput.focus();
+        leadFirstInput.focus();
 
       }, 250);
 
@@ -1046,34 +1140,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-
-  /* =========================================
-     CLOSE MODAL
-     ========================================= */
-
   function closeLeadModal() {
 
-    modal.classList.remove("is-open");
+    leadModal.classList.remove("is-open");
 
-    document.body.classList.remove("lead-modal-open");
+    leadModal.setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
+    document.body.classList.remove(
+      "lead-modal-open"
+    );
 
   }
 
 
-
-  /* =========================================
-     ALWAYS SHOW WHEN PAGE OPENS
-     ========================================= */
+  /* ALWAYS OPEN LEAD FORM ON PAGE LOAD */
 
   openLeadModal();
 
 
-
-  /* =========================================
-     OPEN BUTTONS
-     ========================================= */
-
-  openButtons.forEach(function (button) {
+  leadOpenButtons.forEach(function (button) {
 
     button.addEventListener(
       "click",
@@ -1083,12 +1171,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-
-  /* =========================================
-     CLOSE BUTTONS / BACKDROP
-     ========================================= */
-
-  closeButtons.forEach(function (button) {
+  leadCloseButtons.forEach(function (button) {
 
     button.addEventListener(
       "click",
@@ -1098,60 +1181,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+  /* LEAD FORM AJAX */
 
-  /* =========================================
-     ESC KEY
-     ========================================= */
-
-  document.addEventListener(
-    "keydown",
-    function (event) {
-
-      if (
-        event.key === "Escape" &&
-        modal.classList.contains("is-open")
-      ) {
-
-        closeLeadModal();
-
-      }
-
-    }
-  );
-
-
-
-  /* =========================================
-     AJAX FORMSPREE SUBMISSION
-
-     Keeps visitor on your website.
-     ========================================= */
-
-  form.addEventListener(
+  leadForm.addEventListener(
     "submit",
     async function (event) {
 
       event.preventDefault();
 
+      leadError.hidden = true;
 
-      errorMessage.hidden = true;
+      leadSubmit.disabled = true;
 
-      submitButton.disabled = true;
+      leadSubmitText.hidden = true;
 
-      submitText.hidden = true;
-
-      submitLoading.hidden = false;
+      leadSubmitLoading.hidden = false;
 
 
       const formData =
-        new FormData(form);
+        new FormData(leadForm);
 
 
       try {
 
         const response =
           await fetch(
-            form.action,
+            leadForm.action,
             {
               method: "POST",
               body: formData,
@@ -1162,46 +1217,39 @@ document.addEventListener("DOMContentLoaded", function () {
           );
 
 
-        if (response.ok) {
-
-          formState.hidden = true;
-
-          successState.hidden = false;
-
-          form.reset();
-
-          /*
-            Preserve source after reset.
-          */
-
-          sourceInput.value =
-            leadSource || "Direct";
-
-        }
-
-        else {
+        if (!response.ok) {
 
           throw new Error(
-            "Form submission failed."
+            "Lead form submission failed."
           );
 
         }
+
+
+        leadFormState.hidden = true;
+
+        leadSuccessState.hidden = false;
+
+        leadForm.reset();
+
+        leadSourceInput.value =
+          leadSource;
 
       }
 
       catch (error) {
 
-        errorMessage.hidden = false;
+        leadError.hidden = false;
 
       }
 
       finally {
 
-        submitButton.disabled = false;
+        leadSubmit.disabled = false;
 
-        submitText.hidden = false;
+        leadSubmitText.hidden = false;
 
-        submitLoading.hidden = true;
+        leadSubmitLoading.hidden = true;
 
       }
 
@@ -1209,10 +1257,293 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
 
+  /* =====================================================
+     SAVE CONTACT
+     ===================================================== */
 
-  /* =========================================
-     YEAR
-     ========================================= */
+  const saveContactButton =
+    document.getElementById("save-contact-button");
+
+  const saveContactModal =
+    document.getElementById("save-contact-modal");
+
+  const saveContactCloseButtons =
+    document.querySelectorAll(
+      "[data-close-save-contact]"
+    );
+
+  const saveContactForm =
+    document.getElementById("save-contact-form");
+
+  const saveContactFormState =
+    document.getElementById("save-contact-form-state");
+
+  const saveContactSuccess =
+    document.getElementById("save-contact-success");
+
+  const saveContactEmail =
+    document.getElementById("save-contact-email");
+
+  const saveContactError =
+    document.getElementById("save-contact-error");
+
+  const saveContactSubmit =
+    document.getElementById("save-contact-submit");
+
+  const saveContactSubmitText =
+    saveContactSubmit.querySelector(
+      ".save-contact-submit-text"
+    );
+
+  const saveContactSubmitLoading =
+    saveContactSubmit.querySelector(
+      ".save-contact-submit-loading"
+    );
+
+  const saveContactSource =
+    document.getElementById("save-contact-source");
+
+
+  saveContactSource.value =
+    leadSource;
+
+
+  /* -----------------------------------------------------
+     DEVICE CHECK
+
+     Phones and touch-first smaller devices receive VCF.
+
+     Desktop receives the email/download dialog.
+     ----------------------------------------------------- */
+
+  function useMobileContactFlow() {
+
+    const mobileUserAgent =
+      /Android|iPhone|iPad|iPod/i.test(
+        navigator.userAgent
+      );
+
+    const touchTablet =
+      navigator.maxTouchPoints > 1 &&
+      window.innerWidth <= 1024;
+
+    return mobileUserAgent || touchTablet;
+
+  }
+
+
+  function openSaveContactModal() {
+
+    /*
+      Close the lead modal first in case the visitor
+      opened Save Contact while another dialog was active.
+    */
+
+    closeLeadModal();
+
+    saveContactModal.classList.add(
+      "is-open"
+    );
+
+    saveContactModal.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
+    document.body.classList.add(
+      "save-contact-modal-open"
+    );
+
+
+    setTimeout(function () {
+
+      saveContactEmail.focus();
+
+    }, 200);
+
+  }
+
+
+  function closeSaveContactModal() {
+
+    saveContactModal.classList.remove(
+      "is-open"
+    );
+
+    saveContactModal.setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
+    document.body.classList.remove(
+      "save-contact-modal-open"
+    );
+
+  }
+
+
+  saveContactButton.addEventListener(
+    "click",
+    function () {
+
+      if (useMobileContactFlow()) {
+
+        /*
+          Mobile:
+          Hand the VCF to the operating system.
+        */
+
+        window.location.href =
+          "../assets/contact/lucy-jakab.vcf";
+
+      }
+
+      else {
+
+        /*
+          Desktop:
+          Show Popl-style email/download dialog.
+        */
+
+        openSaveContactModal();
+
+      }
+
+    }
+  );
+
+
+  saveContactCloseButtons.forEach(
+    function (button) {
+
+      button.addEventListener(
+        "click",
+        closeSaveContactModal
+      );
+
+    }
+  );
+
+
+  /* SAVE CONTACT REQUEST AJAX */
+
+  saveContactForm.addEventListener(
+    "submit",
+    async function (event) {
+
+      event.preventDefault();
+
+      saveContactError.hidden = true;
+
+      saveContactSubmit.disabled = true;
+
+      saveContactSubmitText.hidden = true;
+
+      saveContactSubmitLoading.hidden = false;
+
+
+      const formData =
+        new FormData(saveContactForm);
+
+
+      try {
+
+        const response =
+          await fetch(
+            saveContactForm.action,
+            {
+              method: "POST",
+              body: formData,
+              headers: {
+                "Accept": "application/json"
+              }
+            }
+          );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            "Contact request failed."
+          );
+
+        }
+
+
+        saveContactFormState.hidden = true;
+
+        saveContactSuccess.hidden = false;
+
+        saveContactForm.reset();
+
+        saveContactSource.value =
+          leadSource;
+
+      }
+
+      catch (error) {
+
+        saveContactError.hidden = false;
+
+      }
+
+      finally {
+
+        saveContactSubmit.disabled = false;
+
+        saveContactSubmitText.hidden = false;
+
+        saveContactSubmitLoading.hidden = true;
+
+      }
+
+    }
+  );
+
+
+  /* =====================================================
+     ESCAPE KEY
+     ===================================================== */
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (event.key !== "Escape") {
+        return;
+      }
+
+
+      if (
+        saveContactModal.classList.contains(
+          "is-open"
+        )
+      ) {
+
+        closeSaveContactModal();
+
+        return;
+
+      }
+
+
+      if (
+        leadModal.classList.contains(
+          "is-open"
+        )
+      ) {
+
+        closeLeadModal();
+
+      }
+
+    }
+  );
+
+
+  /* =====================================================
+     CURRENT YEAR
+     ===================================================== */
 
   document
     .querySelectorAll("[data-year]")
@@ -1226,7 +1557,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
-
 
 </body>
 </html>
