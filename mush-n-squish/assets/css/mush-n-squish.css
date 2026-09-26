@@ -1,0 +1,257 @@
+/* Mush ’n Squish extension. Load after the supplied Jakab All Trades styles.css. */
+.slime-page {
+  --ink: #3e2b2b; --ink-soft: #665152; --paper: #fff9f5; --cream: #fffcf9;
+  --paper-deep: #f6e7df; --pink: #f4c2c9; --pink-light: #fbe9e9;
+  --rose: #a74357; --rose-dark: #843247; --gold: #986a39;
+  --line: #dfd0c5; --shadow: 0 18px 50px rgba(92,52,49,.08); --content: 1216px;
+  background: var(--paper); color: var(--ink); font-size: 1rem; line-height: 1.65;
+}
+.slime-page h1,.slime-page h2,.slime-page h3 { font-weight: 400; letter-spacing: -.045em; }
+.slime-page h2 { font-size: clamp(2.35rem,4.1vw,3.6rem); line-height: 1.08; }
+.slime-page h3 { font-size: 1.85rem; line-height: 1.15; }
+.slime-page em { font-weight: 400; }
+.slime-page .container { width: min(calc(100% - 64px),var(--content)); }
+.slime-page .section { padding-block: 88px; }
+.slime-page section[id] { scroll-margin-top: 110px; }
+.slime-page .eyebrow { font-size: .75rem; letter-spacing: .16em; color: var(--rose); font-weight: 700; line-height: 1.6; margin-bottom: 18px; }
+.slime-page .eyebrow::before { width: 24px; }
+.slime-page .button { min-height: 52px; padding: 13px 24px; font-size: .875rem; border-radius: 7px; font-weight: 650; gap: 18px; }
+.slime-page .button-dark { color: white; background: var(--rose); }
+.slime-page .button-dark:hover { background: var(--rose-dark); }
+.slime-page .button-secondary { background: transparent; border-color: var(--line); color: var(--ink); cursor: pointer; }
+.slime-page .text-link { font-weight: 600; font-size: .875rem; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+.slime-page .button-row { align-items: center; gap: 24px; }
+.slime-page :focus-visible { outline: 3px solid var(--rose); outline-offset: 4px; }
+.slime-page .skip-link { color: var(--ink); }
+.parent-bar { background: #f8e3e5; border-bottom: 1px solid #f0d2d6; font-size: .75rem; }
+.parent-inner { min-height: 34px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.parent-inner a { text-decoration: none; }
+.parent-inner a:hover { text-decoration: underline; }
+.parent-inner a span { margin-left: 10px; }
+.slime-page .site-header { background: rgba(255,252,249,.97); color: var(--ink); border-bottom: 1px solid var(--line); }
+.slime-page .header-inner { min-height: 94px; }
+.slime-page .brand { gap: 12px; font-weight: 400; }
+.brand-logo { width: 56px; height: 56px; object-fit: cover; border-radius: 50%; }
+.slime-page .brand-text { font-family: Georgia,"Times New Roman",serif; font-size: 1.65rem; line-height: 1.1; }
+.slime-page .brand small { margin-top: 7px; color: var(--rose); font-family: system-ui,sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .27em; }
+.slime-page .site-nav { gap: 28px; }
+.slime-page .site-nav a { color: var(--ink-soft); font-weight: 500; font-size: .875rem; }
+.slime-page .site-nav a:hover { color: var(--rose); }
+.slime-page .site-nav .nav-cta { color: var(--rose-dark); border: 1px solid #b77a82; border-radius: 7px; padding: 10px 18px; }
+.slime-page .menu-button { color: var(--ink); border-color: var(--line); }
+.slime-page .hero { background: var(--paper); color: var(--ink); }
+.slime-page .hero-inner { min-height: 628px; grid-template-columns: .9fr 1.1fr; gap: 70px; padding-block: 62px 66px; }
+.slime-page h1 { font-size: clamp(4.5rem,7.5vw,6.8rem); font-weight: 400; line-height: .94; margin-bottom: 28px; letter-spacing: -.055em; }
+.slime-page h1 em { color: var(--rose); }
+.slime-page .hero-copy > p:not(.eyebrow) { font-size: 1rem; color: var(--ink-soft); max-width: 420px; margin-bottom: 26px; }
+.slime-page .hero-copy > .hero-footnote { font-size: .8125rem!important; margin: 23px 0 0!important; color: var(--ink-soft); }
+.brand-feature { position: relative; background: #f7dfe0; border: 1px solid #e2bdbd; padding: 24px; box-shadow: 13px 13px 0 #f3ece3; }
+.brand-feature-top { display: flex; justify-content: space-between; gap: 16px; font-size: .75rem; letter-spacing: .11em; color: #754d4f; margin-bottom: 24px; }
+.hero-brand-art { width: 100%; height: auto; border: 1px solid #c99c6d; }
+.brand-feature-bottom { padding-top: 30px; display: flex; gap: 24px; justify-content: space-between; align-items: center; }
+.brand-feature-bottom p { font-family: Georgia,serif; font-size: 1.95rem; line-height: 1.25; margin: 0; letter-spacing: -.025em; }
+.brand-feature-bottom p em { color: var(--rose); }
+.family-seal { flex-shrink: 0; width: 90px; min-height: 90px; padding: 18px 6px; display: block; border-radius: 50%; border: 1px solid #b9857e; text-align: center; font-size: .75rem; line-height: 1.25; transform: rotate(9deg); color: #6e4647; }
+.family-seal strong { font-family: Georgia,serif; font-size: 1.5rem; font-weight: 400; }
+.slime-page .trust-strip { border-block: 1px solid var(--line); background: #f6eee6; }
+.slime-page .trust-inner { min-height: 72px; color: #6c544a; font-size: .75rem; font-weight: 500; letter-spacing: .1em; }
+.slime-page .section-heading { max-width: none; margin-bottom: 36px; }
+.slime-page .section-heading p { color: var(--ink-soft); font-size: 1rem; }
+.slime-page .section-heading .eyebrow { color: var(--rose); font-size: .75rem; margin-bottom: 14px; }
+.heading-inline { display: flex; justify-content: space-between; align-items: flex-end; gap: 64px; }
+.heading-inline h2 { margin-bottom: 0; }
+.heading-inline > p,.heading-inline > div:last-child:not(:first-child) { max-width: 360px; padding-bottom: 5px; }
+.heading-inline > div:last-child .text-link { display: inline-block; margin-top: 22px; }
+.texture-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 12px; }
+.texture-card { position: relative; display: flex; flex-direction: column; min-width: 0; padding: 24px 22px 27px; border: 1px solid var(--line); background: #fbf0d9; }
+.texture-number { font-family: Georgia,serif; color: #816342; font-size: 2.1rem; font-style: italic; }
+.texture-note { font-size: .75rem; color: #6f5650; margin: 29px 0 12px; line-height: 1.4; }
+.slime-page .texture-card h3 { font-size: clamp(1.8rem,2.4vw,2.3rem); margin-bottom: 18px; }
+.texture-card > p:last-child { color: var(--ink-soft); font-size: .9375rem; margin: 0; }
+.texture-cloud { background: #f9e1e4; }
+.texture-stretchy { background: #f1e8d7; }
+.texture-water { background: #f3ede8; }
+.texture-snow { background: #fffdf9; }
+.section-note { font-size: .875rem; color: var(--ink-soft); margin: 23px 0 0; }
+.experience-section { background: #f7ebe4; border-block: 1px solid var(--line); }
+.experience-layout { display: grid; grid-template-columns: 1fr 1.05fr; gap: 100px; align-items: center; }
+.slime-page .experience-layout .section-heading { margin-bottom: 0; max-width: 460px; }
+.slime-page .experience-layout .section-heading p:last-child { max-width: 355px; }
+.steps-list { padding: 0; margin: 0; list-style: none; }
+.steps-list li { display: flex; gap: 25px; padding: 23px 0; border-bottom: 1px solid #ddc9ba; }
+.steps-list li:first-child { padding-top: 0; }
+.steps-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.step-number { flex-shrink: 0; width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid #b89a7e; border-radius: 50%; color: #866342; font-family: Georgia,serif; font-size: 1.2rem; }
+.slime-page .steps-list h3 { font-size: 1.55rem; margin: 3px 0 8px; }
+.steps-list p { color: var(--ink-soft); margin: 0; font-size: .9375rem; }
+.event-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 36px; margin-top: 44px; }
+.event-card { border-top: 1px solid #bd9570; padding: 23px 0 0; }
+.event-kicker { font-size: .75rem; letter-spacing: .14em; color: #806247; }
+.slime-page .event-card h3 { margin-top: 20px; font-size: 1.9rem; }
+.event-card p { margin-bottom: 0; color: var(--ink-soft); }
+.extras-line { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 33px; display: grid; grid-template-columns: 1fr 1fr; gap: 65px; align-items: center; }
+.extras-line .eyebrow { margin-bottom: 10px; }
+.slime-page .extras-line h3 { font-size: 1.6rem; margin-bottom: 0; }
+.extras-line p { color: var(--ink-soft); margin: 0; }
+.family-section { background: #f8e5e5; border-block: 1px solid #ecd1d1; }
+.slime-page .split { grid-template-columns: .8fr 1.2fr; gap: 100px; }
+.family-visual { text-align: center; }
+.family-visual img { width: min(100%,340px); height: auto; margin: auto; border-radius: 50%; border: 8px solid #fff8f4; box-shadow: 0 12px 38px #9e5d5620; }
+.family-visual p { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; margin: 24px 0 0; color: #785153; }
+.slime-page .copy p { color: var(--ink-soft); font-size: 1rem; }
+.slime-page .copy p.eyebrow { color: var(--rose); font-size: .75rem; }
+.slime-page .copy em { color: var(--rose); }
+.slime-page .copy .text-link { display: inline-block; margin-top: 10px; }
+.booking-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 90px; align-items: start; }
+.booking-copy { padding-top: 20px; }
+.booking-copy h2 em { color: var(--rose); }
+.booking-copy > p:not(.eyebrow) { color: var(--ink-soft); max-width: 390px; }
+.contact-block { display: grid; gap: 8px; margin-top: 36px; }
+.contact-block > span { color: var(--rose); font-size: .75rem; text-transform: uppercase; letter-spacing: .14em; }
+.contact-phone { font-family: Georgia,serif; font-size: 1.7rem; text-decoration: none; }
+.contact-block a:last-child { font-size: .9375rem; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.booking-note { font-size: .875rem; padding-top: 18px; }
+.booking-card { border: 1px solid #dcc8bc; border-top: 3px solid #b78751; padding: 35px; background: #fffdfb; box-shadow: var(--shadow); }
+.slime-page .booking-card h3 { margin-bottom: 12px; font-size: 1.85rem; }
+.form-intro { color: var(--ink-soft); font-size: .875rem; margin: 0 0 25px; }
+.form-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 19px 16px; }
+.form-field { display: grid; align-content: start; gap: 7px; min-width: 0; }
+.form-field label { font-size: .875rem; font-weight: 600; line-height: 1.4; }
+.form-field label span { font-size: .75rem; font-weight: 400; color: var(--ink-soft); }
+.form-field input,.form-field select,.form-field textarea { font: inherit; font-size: 1rem; color: var(--ink); background: #fffcf8; width: 100%; min-width: 0; min-height: 48px; border: 1px solid #c8b8ac; border-radius: 5px; padding: 11px 12px; line-height: 1.4; }
+.form-field select { padding-right: 24px; }
+.form-field textarea { resize: vertical; }
+.form-field input::placeholder,.form-field textarea::placeholder { color: #806c68; opacity: 1; }
+.field-wide { grid-column: 1/-1; }
+.slime-page .form-submit { width: 100%; justify-content: space-between; margin-top: 22px; cursor: pointer; }
+.form-note { font-size: .75rem; color: #78635e; margin: 15px 0 0; line-height: 1.55; }
+.email-draft { margin-top: 26px; padding-top: 24px; border-top: 1px solid var(--line); }
+.email-draft[hidden] { display: none; }
+.email-draft h4 { font-size: 1.125rem; margin: 0 0 8px; }
+.email-draft p { font-size: .875rem; color: var(--ink-soft); overflow-wrap: anywhere; }
+.email-draft .button-row { gap: 10px; }
+.email-draft summary { margin-top: 18px; font-size: .875rem; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+.email-draft textarea { width: 100%; margin-top: 12px; padding: 12px; font: inherit; font-size: .875rem; border: 1px solid var(--line); resize: vertical; }
+.copy-status:empty { display: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.slime-page .site-footer { background: #3e2b2e; color: #fff8f1; padding: 46px 0 26px; }
+.footer-top { display: flex; justify-content: space-between; align-items: center; gap: 35px; }
+.footer-wordmark { font-family: Georgia,serif; font-size: 2rem; letter-spacing: -.04em; text-decoration: none; }
+.footer-top p { font-size: .875rem; color: #e7c6c5; margin: 6px 0 0; }
+.slime-page .footer-links { display: flex; flex-wrap: wrap; gap: 25px; font-size: .875rem; }
+.slime-page .footer-links a { color: #f5dfd9; }
+.slime-page .footer-bottom { color: #e0c6c1; border-color: #725556; font-size: .75rem; margin-top: 36px; }
+@media(min-width:921px) { .slime-page .site-nav { display: flex!important; } }
+@media(max-width:1100px) {
+  .slime-page .hero-inner { gap: 44px; }
+  .slime-page .site-nav { gap: 20px; }
+  .texture-card { padding: 20px 16px; }
+  .booking-layout { gap: 45px; }
+  .experience-layout { gap: 55px; }
+  .slime-page .split { gap: 60px; }
+  .brand-feature { padding: 18px; }
+  .brand-feature-top { font-size: .75rem; letter-spacing: .035em; }
+}
+@media(max-width:920px) {
+  .slime-page .container { width: min(calc(100% - 40px),var(--content)); }
+  .slime-page .header-inner { min-height: 82px; }
+  .slime-page .site-nav { top: 82px; background: var(--cream); border: 1px solid var(--line); box-shadow: var(--shadow); gap: 0; border-radius: 8px; }
+  .slime-page .site-nav a { min-height: 46px; }
+  .slime-page .site-nav a:hover { background: #fbe9e9; }
+  .slime-page .site-nav .nav-cta { margin-top: 8px; }
+  .slime-page .hero-inner { grid-template-columns: 1fr 1fr; gap: 32px; min-height: auto; padding-block: 54px; }
+  .slime-page h1 { font-size: clamp(4rem,9vw,5.5rem); }
+  .slime-page .hero-copy > p:not(.eyebrow) { font-size: .9375rem; }
+  .slime-page .hero-copy .button-row { gap: 16px; }
+  .brand-feature-top { flex-direction: column; gap: 2px; margin-bottom: 18px; }
+  .brand-feature-bottom { padding-top: 24px; gap: 12px; }
+  .brand-feature-bottom p { font-size: 1.65rem; }
+  .family-seal { width: 65px; min-height: 65px; padding-block: 13px; }
+  .family-seal strong { font-size: 1.15rem; }
+  .slime-page .section { padding-block: 66px; }
+  .texture-grid { grid-template-columns: repeat(6,minmax(0,1fr)); }
+  .texture-card { grid-column: span 2; padding: 24px; }
+  .texture-card:nth-child(n+4) { grid-column: span 3; }
+  .texture-note { margin-top: 16px; }
+  .heading-inline { gap: 35px; }
+  .heading-inline > p,.heading-inline > div:last-child:not(:first-child) { max-width: 320px; }
+  .event-grid { gap: 25px; }
+  .slime-page .event-card h3 { font-size: 1.65rem; }
+  .extras-line { gap: 35px; }
+  .slime-page .split { grid-template-columns: .8fr 1.2fr; gap: 45px; }
+  .booking-layout { grid-template-columns: .8fr 1.2fr; gap: 35px; }
+  .booking-card { padding: 26px; }
+  .form-grid { grid-template-columns: 1fr; gap: 17px; }
+  .footer-top { align-items: flex-start; }
+  .slime-page .footer-links { gap: 13px; flex-direction: column; }
+}
+@media(max-width:680px) {
+  .slime-page .container { width: calc(100% - 36px); }
+  .parent-inner { justify-content: center; min-height: 32px; }
+  .parent-inner > span { display: none; }
+  .slime-page .header-inner { min-height: 78px; gap: 14px; }
+  .brand-logo { width: 47px; height: 47px; }
+  .slime-page .brand { gap: 9px; }
+  .slime-page .brand-text { font-size: 1.35rem; }
+  .slime-page .brand small { font-size: .75rem; margin-top: 6px; }
+  .slime-page .site-nav { top: 78px; left: 18px; right: 18px; }
+  .slime-page .menu-button { width: 44px; height: 44px; flex-shrink: 0; }
+  .slime-page .hero-inner { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 50px; }
+  .slime-page h1 { font-size: clamp(4.4rem,18vw,6.2rem); margin-bottom: 24px; }
+  .slime-page .hero-copy > p:not(.eyebrow) { font-size: 1rem; max-width: 440px; }
+  .slime-page .hero-copy .hero-footnote { margin-top: 20px!important; }
+  .slime-page .hero-copy .button-row { gap: 22px; }
+  .brand-feature { margin-right: 9px; padding: 18px; box-shadow: 9px 9px 0 #f3ece3; }
+  .brand-feature-top { flex-direction: row; margin-bottom: 18px; font-size: .75rem; gap: 12px; letter-spacing: .035em; }
+  .brand-feature-bottom { padding-top: 23px; }
+  .brand-feature-bottom p { font-size: 1.7rem; }
+  .family-seal { width: 74px; min-height: 74px; padding-block: 15px; }
+  .family-seal strong { font-size: 1.25rem; }
+  .slime-page .trust-inner { grid-template-columns: 1fr; padding-block: 16px; gap: 0; }
+  .slime-page .trust-inner span { padding: 5px; }
+  .slime-page .trust-inner span + span { border-left: 0; }
+  .slime-page .section { padding-block: 58px; }
+  .slime-page h2 { font-size: clamp(2.35rem,9.5vw,3rem); }
+  .heading-inline { display: block; }
+  .heading-inline > p,.heading-inline > div:last-child:not(:first-child) { margin-top: 22px; max-width: 100%; padding-bottom: 0; }
+  .texture-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+  .texture-card,.texture-card:nth-child(n+4) { grid-column: auto; padding: 21px 17px; }
+  .texture-card:last-child { grid-column: 1/-1; display: grid; grid-template-columns: 1fr 1fr; column-gap: 22px; }
+  .texture-card:last-child .texture-number { grid-column: 1; }
+  .texture-card:last-child .texture-note { grid-column: 1; }
+  .texture-card:last-child h3 { grid-column: 1; margin-bottom: 0; }
+  .texture-card:last-child p:last-child { grid-column: 2; grid-row: 1/4; align-self: center; }
+  .slime-page .texture-card h3 { font-size: 1.9rem; }
+  .texture-card > p:last-child { font-size: .9375rem; }
+  .texture-note { font-size: .75rem; margin-top: 16px; }
+  .texture-number { font-size: 1.9rem; }
+  .experience-layout,.slime-page .split,.booking-layout,.extras-line { grid-template-columns: 1fr; gap: 34px; }
+  .steps-list li { gap: 18px; }
+  .event-grid { grid-template-columns: 1fr; gap: 26px; margin-top: 32px; }
+  .event-card { padding-top: 20px; }
+  .slime-page .event-card h3 { font-size: 1.85rem; margin-top: 12px; }
+  .event-card p { margin-top: 12px; }
+  .extras-line { margin-top: 35px; gap: 17px; }
+  .family-visual img { width: min(80%,270px); }
+  .family-visual p { margin-top: 18px; }
+  .slime-page .copy h2 { margin-top: 0; }
+  .booking-copy { padding-top: 0; }
+  .booking-copy h2 br:nth-child(2) { display: none; }
+  .booking-card { padding: 25px 20px; }
+  .slime-page .booking-card h3 { font-size: 1.7rem; }
+  .form-grid { grid-template-columns: 1fr; }
+  .footer-top { flex-direction: column; gap: 28px; }
+  .slime-page .footer-links { gap: 16px; flex-direction: row; }
+  .slime-page .footer-bottom { gap: 8px; margin-top: 27px; }
+}
+@media(max-width:360px) {
+  .slime-page .brand-text { font-size: 1.15rem; }
+  .brand-logo { width: 40px; height: 40px; }
+  .slime-page .button-row { gap: 16px; }
+  .texture-card { padding: 18px 13px; }
+  .brand-feature { padding: 14px; }
+  .brand-feature-top { display: block; }
+  .brand-feature-top span { display: block; }
+  .brand-feature-bottom p { font-size: 1.4rem; }
+}
+@media(prefers-reduced-motion:reduce) { .slime-page *, .slime-page *::before,.slime-page *::after { scroll-behavior: auto!important; transition: none!important; transform: none!important; } }
