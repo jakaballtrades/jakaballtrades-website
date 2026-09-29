@@ -15,8 +15,9 @@
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23f9c6ce'/%3E%3Ccircle cx='32' cy='32' r='27' fill='%23fff9f5' stroke='%23966936'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23a14456'%3Em%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="stylesheet" href="/mush-n-squish/assets/css/mush-n-squish.css">
-  <script src="/mush-n-squish/assets/js/mush-n-squish.js" defer></script>
+  <link rel="stylesheet" href="/mush-n-squish/assets/css/mush-n-squish.css?v=2">
+  <script src="/mush-n-squish/assets/js/gallery.js?v=2" defer></script>
+  <script src="/mush-n-squish/assets/js/mush-n-squish.js?v=2" defer></script>
 </head>
 <body class="slime-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -29,7 +30,7 @@
       </a>
       <button class="menu-button" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false" data-menu-button><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
       <nav id="site-navigation" class="site-nav" aria-label="Main navigation" data-site-nav>
-        <a href="#slimes">The slime menu</a><a href="#events">Parties &amp; events</a><a href="#about">Our family</a><a class="nav-cta" href="#booking">Let’s make a party</a>
+        <a href="#slimes">The slime menu</a><a href="#events">Parties &amp; events</a><a href="#gallery">Photos</a><a href="#about">Our family</a><a class="nav-cta" href="#booking">Let’s make a party</a>
       </nav>
     </div>
   </header>
@@ -89,6 +90,23 @@
       </div>
     </section>
 
+    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-heading heading-inline">
+          <div><p class="eyebrow">Mush ’n Squish in the moment</p><h2 id="gallery-title">A little glimpse<br>of the fun.</h2></div>
+          <p>A look at the slime bar, the creations, and the celebrations we get to be part of.</p>
+        </div>
+        <div class="gallery-grid" id="event-gallery" hidden></div>
+        <div class="gallery-empty" id="gallery-empty"><p>Party &amp; event photos are coming soon.</p><span>We can’t wait to share more squishy moments with you.</span></div>
+        <template id="event-photo-template">
+          <figure class="event-photo">
+            <a class="event-photo-link" target="_blank" rel="noopener"><img width="1000" height="800" alt="" decoding="async"></a>
+            <figcaption></figcaption>
+          </figure>
+        </template>
+      </div>
+    </section>
+
     <section class="section family-section" id="about" aria-labelledby="about-title">
       <div class="container split">
         <div class="family-visual"><img src="/mush-n-squish/assets/images/mush-n-squish-logo.jpeg" width="1254" height="1254" loading="lazy" alt="Mush ’n Squish Slime Bar circular pink logo"><p>Small business. Big imagination.</p></div>
@@ -100,33 +118,39 @@
       <div class="container booking-layout">
         <div class="booking-copy"><p class="eyebrow">Let’s create something happy</p><h2 id="booking-title">Your next party<br>starts with<br><em>a little squish.</em></h2><p>Share your date, location, and a few details. Lucy will help you explore availability and pricing for your event.</p><div class="contact-block"><span>Talk to Lucy</span><a class="contact-phone" href="tel:+18643956377">864 · 395 · 6377</a><a href="mailto:JakabAllTrades@gmail.com">JakabAllTrades@gmail.com</a></div><p class="booking-note">Based in Pendleton, SC. Ask about your event location in the Upstate.</p></div>
         <div class="booking-card">
-          <h3>Tell us about your event.</h3><p class="form-intro" id="form-help">Fill this out to prepare an email to Lucy. You’ll review and send it from your email app.</p>
-          <form id="booking-form" aria-describedby="form-help">
+          <h3>Tell us about your event.</h3><p class="form-intro" id="form-help">Send Lucy your event details, and she’ll be in touch about availability and pricing.</p>
+          <form id="booking-form" action="https://formspree.io/f/maennzyr" method="POST" aria-describedby="form-help">
+            <input type="hidden" name="_subject" value="New Mush ’n Squish Event Inquiry">
+            <input type="hidden" name="page" value="Mush ’n Squish Slime Bar">
+            <input type="hidden" name="lead_source" value="https://jakaballtrades.com/mush-n-squish/">
+            <fieldset class="booking-fields" id="booking-fields"><legend class="sr-only">Your event details</legend>
             <div class="form-grid">
               <div class="form-field"><label for="full-name">Your name <span aria-hidden="true">*</span></label><input id="full-name" name="name" autocomplete="name" required maxlength="100"></div>
               <div class="form-field"><label for="email">Email address <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="150"></div>
-              <div class="form-field"><label for="event-type">What are you planning?</label><select id="event-type" name="eventType"><option>Birthday party</option><option>School or church event</option><option>Family or group celebration</option><option>Festival or market</option><option>Something else</option></select></div>
-              <div class="form-field"><label for="event-date">Preferred date <span>(optional)</span></label><input id="event-date" name="date" type="date"></div>
-              <div class="form-field"><label for="guests">Number creating slime <span>(estimate)</span></label><input id="guests" name="guests" type="number" min="1" max="10000" step="1" placeholder="e.g. 15"></div>
-              <div class="form-field"><label for="location">Event city or venue <span aria-hidden="true">*</span></label><input id="location" name="location" autocomplete="address-level2" placeholder="e.g. Pendleton, SC" required maxlength="200"></div>
-              <div class="form-field field-wide"><label for="details">Tell us a little more <span>(optional)</span></label><textarea id="details" name="details" rows="3" maxlength="2000" placeholder="Guest ages, theme, favorite textures, or any questions…"></textarea></div>
+              <div class="form-field"><label for="event-type">What are you planning?</label><select id="event-type" name="event_type"><option>Birthday party</option><option>School or church event</option><option>Family or group celebration</option><option>Festival or market</option><option>Something else</option></select></div>
+              <div class="form-field"><label for="event-date">Preferred date <span>(optional)</span></label><input id="event-date" name="event_date" type="date"></div>
+              <div class="form-field"><label for="guests">Number creating slime <span>(estimate)</span></label><input id="guests" name="guest_count" type="number" min="1" max="10000" step="1" placeholder="e.g. 15"></div>
+              <div class="form-field"><label for="location">Event city or venue <span aria-hidden="true">*</span></label><input id="location" name="event_location" autocomplete="address-level2" placeholder="e.g. Pendleton, SC" required maxlength="200"></div>
+              <div class="form-field field-wide"><label for="details">Tell us a little more <span>(optional)</span></label><textarea id="details" name="message" rows="3" maxlength="2000" placeholder="Guest ages, theme, favorite textures, or any questions…"></textarea></div>
             </div>
-            <button class="button button-dark form-submit" type="submit">Create booking email <span aria-hidden="true">↗</span></button>
+            </fieldset>
+            <button class="button button-dark form-submit" id="booking-submit" type="submit"><span id="booking-submit-label">Send event inquiry</span><span aria-hidden="true">↗</span></button>
+            <p class="booking-status" id="booking-status" role="status" hidden></p>
+            <p class="booking-error" id="booking-error" role="alert" tabindex="-1" hidden></p>
             <p class="form-note">An inquiry starts the conversation. Your date is reserved once the details are confirmed with Lucy.</p>
-            <noscript><p>Email <a href="mailto:JakabAllTrades@gmail.com">JakabAllTrades@gmail.com</a> with your name, date, location, and guest count, or call <a href="tel:+18643956377">864-395-6377</a>.</p></noscript>
+
           </form>
-          <div class="email-draft" id="email-draft" hidden>
-            <h4 id="draft-heading" tabindex="-1">Your email draft is ready.</h4><p>Open your email app to review and send it. If you use webmail, copy the inquiry below and email it to <a href="mailto:JakabAllTrades@gmail.com">JakabAllTrades@gmail.com</a>.</p>
-            <div class="button-row"><a class="button button-dark" id="open-email" href="mailto:JakabAllTrades@gmail.com">Open email app</a><button class="button button-secondary" id="copy-inquiry" type="button">Copy inquiry</button></div>
-            <details><summary>View your inquiry</summary><label class="sr-only" for="inquiry-text">Your booking inquiry</label><textarea id="inquiry-text" rows="10" readonly></textarea></details>
-            <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+          <div class="booking-success" id="booking-success" hidden>
+            <h4 id="success-heading" tabindex="-1">Thank you! Your inquiry has been sent.</h4>
+            <p>Lucy will be in touch about your event. Your date will be reserved once the details are confirmed together.</p>
+            <button class="button button-secondary" id="another-inquiry" type="button">Send another inquiry</button>
           </div>
         </div>
       </div>
     </section>
   </main>
   <footer class="site-footer">
-    <div class="container"><div class="footer-top"><div><a class="footer-wordmark" href="#top">Mush ’n Squish</a><p>Slime, Squish, Create.</p></div><div class="footer-links"><a href="#slimes">The slime menu</a><a href="#booking">Plan an event</a><a href="/">Jakab All Trades <span aria-hidden="true">↗</span></a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> Mush ’n Squish Slime Bar.</span><span>Family run in Pendleton, South Carolina.</span></div></div>
+    <div class="container"><div class="footer-top"><div><a class="footer-wordmark" href="#top">Mush ’n Squish</a><p>Slime, Squish, Create.</p></div><div class="footer-links"><a href="#slimes">The slime menu</a><a href="#booking">Plan an event</a><a href="#gallery">Event photos</a><a href="/">Jakab All Trades <span aria-hidden="true">↗</span></a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> Mush ’n Squish Slime Bar.</span><span>Family run in Pendleton, South Carolina.</span></div></div>
   </footer>
 </body>
 </html>
