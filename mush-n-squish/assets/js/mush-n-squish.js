@@ -87,6 +87,8 @@ form.addEventListener('submit', async event => {
     form.hidden = true;
     formHelp.hidden = true;
     formSuccess.hidden = false;
+    // Record only the outcome, never the visitor's submitted details.
+    try { window.sitePulse?.track('Form: Slime event inquiry accepted'); } catch {}
     document.getElementById('success-heading').focus();
   } catch (error) {
     formError.textContent = error && (error.name === 'AbortError' || error instanceof TypeError)
@@ -163,6 +165,7 @@ for (const photo of eventPhotos) {
   figure.hidden = true;
   link.href = photoUrl.href;
   link.setAttribute('aria-label', `View full-size photo: ${alt}`);
+  link.setAttribute('data-pulse-event', 'Link: View slime gallery photo');
   img.alt = alt;
   caption.textContent = typeof photo.caption === 'string' ? photo.caption : '';
   img.addEventListener('load', () => {
